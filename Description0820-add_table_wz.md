@@ -1,16 +1,21 @@
 ### **Add RECT from TKDE2020 **
 
-We added RECT from the TKDE2020 paper "[Network Embedding with Completely-imbalanced Labels](https://ieeexplore.ieee.org/document/8979355).", which fixes the problem of zero-shot (i.e., completely-imbalanced) label setting in graph embedding tasks. 
+A proposal of a new GNN model coming from TKDE 2020: https://ieeexplore.ieee.org/document/8979355
+The original implementation is: https://github.com/zhengwang100/RECT
 
-1. Add a model file `rect_model.py` in torch_geometric/nn/models.
+## **Dataset and experimental setting**
 
-   -`rect_model.py` implements RECT (or more specifically its supervised part RECT-L) and some related functions like label processing and class semantic knowledge generation.
+Three DGL's build-in datasets (Cora, Citeseer, and Pubmed) with their default train/val/test settings are used in this example. In addition, as this paper considers the zero-shot (i.e., completely-imbalanced) label setting, those "unseen" classes should be removed from the training set, as suggested in the paper. In this example, in each dataset, we simply remove the 2-3 classes (i.e., these 2-3 classes are unseen classes) from the labeled training set. Then, we obtain graph embedding results by different models. Finally, with the obtained embedding results and the original balanced labels, we train a logistic regression classifier to evaluate the model performance.
 
-2. Add an example file `rect.py` in pytorch_geometric/examples/.
+## **Usage** 
 
-​       -`rect.py` shows how to train and evaluate the model.
+`python rect.py --dataset cora --removed-class 1 2 3` #reproducing the RECT-L on "cora" datasets in the zero-shot label setting
 
+`python run_gcn_feats.py --dataset cora --removed-class 1 2 3` #reproducing the GCN on "cora" datasets in the zero-shot label setting and evaluating the original node features
 
+## **Performance**
+
+The performance results are are as follows:
 
 <center><B>Table 1: Node classification results with some classes as "unseen"</B></center>
 
