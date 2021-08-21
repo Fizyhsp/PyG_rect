@@ -1,7 +1,6 @@
-### **Add RECT from TKDE2020 **
+# **PyG Implementation of RECT (TKDE20)**
 
-A proposal of a new GNN model coming from TKDE 2020: https://ieeexplore.ieee.org/document/8979355
-The original implementation is: https://github.com/zhengwang100/RECT
+This PyG example implements the GNN model **RECT** (or more specifically its supervised part **RECT-L**) proposed in the paper [Network Embedding with Completely-imbalanced Labels](https://ieeexplore.ieee.org/document/8979355). The authors' original implementation can be found [here](https://github.com/zhengwang100/RECT).
 
 ## **Dataset and experimental setting**
 
@@ -61,11 +60,3 @@ The performance results are are as follows:
                 <td align="center">73.10</td>
         </tr>
 </table>
-We use three PyG's build-in datasets (Citeseer, Cora and Pubmed) with their default train/val/test settings. As shown above, RECT significantly outperforms GCN by 20-35%, relatively. The comparison implementations of RECT, GCN and NodeFeats can be found in our local [project](https://github.com/Fizyhsp/xxx/compare_feats_gcn.py).
-
-We think RECT should be part of PyG, as the zero-shot label setting (when some classes do not have any labels) is very common in practical applications. On the other hand, existing methods (like GCN) perform very badly in this case; for example, GCN performs much worse than using raw node features. 
-
-We are very happy to answer any questions and discuss how to integrate our method in PyG in an optimal way. Please feel free to contact us. 
-
-Author: [Tingzhang Zhao](https://github.com/Fizyhsp) (undergraduate, @USTB) , and Zheng Wang (supervisor, the original author of this paper, AP@USTB).
-
