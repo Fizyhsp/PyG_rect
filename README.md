@@ -15,9 +15,8 @@ Three DGL's build-in datasets (Cora, Citeseer, and Pubmed) with their default tr
 ## **Performance**
 
 The performance results are are as follows:
-<br/><br/>
 <center><B>Table 1: Node classification results with some classes as "unseen"</B></center>
-
+<br/><br/>
 <table>
         <tr>
                 <td align="center"><B>Datasets</B></td>
