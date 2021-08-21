@@ -8,9 +8,9 @@ Three DGL's build-in datasets (Cora, Citeseer, and Pubmed) with their default tr
 
 ## **Usage** 
 
-`python rect.py --dataset cora --removed-classes 1 2 3` #reproducing the RECT-L on "cora" datasets in the zero-shot label setting
+`python rect.py --dataset citeseer --removed-classes 1 2 5` #reproducing the RECT-L on "citeseer" datasets in the zero-shot label setting
 
-`python run_gcn_feats.py --dataset cora --removed-classes 1 2 3` #reproducing the GCN on "cora" datasets in the zero-shot label setting and evaluating the original node features
+`python run_gcn_feats.py --dataset citeseer --removed-classes 1 2 5` #reproducing the GCN on "citeseer" datasets in the zero-shot label setting and evaluating the original node features
 
 ## **Performance**
 
