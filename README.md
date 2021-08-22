@@ -10,11 +10,11 @@ Three PyG's build-in datasets (Cora, Citeseer, and Pubmed) with their default tr
 
 `python rect.py --dataset citeseer --removed-classes 1 2 5` #reproducing the RECT-L on "citeseer" datasets in the zero-shot label setting
 
-`python run_gcn_feats.py --dataset citeseer --removed-classes 1 2 5` #reproducing the GCN on "citeseer" datasets in the zero-shot label setting and evaluating the original node features
+`python run_gcn_feats.py --dataset citeseer --removed-classes 1 2 5` #reproducing the GCN on "citeseer" datasets in the zero-shot label setting and also evaluating the original node features
 
 ## **Performance**
 
-The performance results are are as follows:
+The performance results are as follows:
 <center><B>Table 1: Node classification results with some classes as "unseen"</B></center>
 <br/><br/>
 <table>
