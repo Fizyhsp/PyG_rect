@@ -4,7 +4,7 @@ This PyG example implements the GNN model **RECT** (or more specifically its sup
 
 ## **Dataset and experimental setting**
 
-Three DGL's build-in datasets (Cora, Citeseer, and Pubmed) with their default train/val/test settings are used in this example. In addition, as this paper considers the zero-shot (i.e., completely-imbalanced) label setting, those "unseen" classes should be removed from the training set, as suggested in the paper. In this example, in each dataset, we simply remove the 1-3 classes (i.e., these 1-3 classes are unseen classes) from the labeled training set. Then, we obtain graph embedding results by different models. Finally, with the obtained embedding results and the original balanced labels, we train a logistic regression classifier to evaluate the model performance.
+Three PyG's build-in datasets (Cora, Citeseer, and Pubmed) with their default train/val/test settings are used in this example. In addition, as this paper considers the zero-shot (i.e., completely-imbalanced) label setting, those "unseen" classes should be removed from the training set, as suggested in the paper. In this example, in each dataset, we simply remove the 1-3 classes (i.e., these 1-3 classes are unseen classes) from the labeled training set. Then, we obtain graph embedding results by different models. Finally, with the obtained embedding results and the original balanced labels, we train a logistic regression classifier to evaluate the model performance.
 
 ## **Usage** 
 
